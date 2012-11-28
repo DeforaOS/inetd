@@ -104,7 +104,7 @@ int service_listen(Service * s)
 		s->fd = -1;
 		return inetd_error("bind", 1);
 	}
-	if(s->socket == SS_STREAM && listen(s->fd, 5) != 0)
+	if(s->socket == SS_STREAM && listen(s->fd, SOMAXCONN) != 0)
 	{
 		close(s->fd);
 		s->fd = -1;
