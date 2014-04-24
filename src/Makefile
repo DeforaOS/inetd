@@ -68,10 +68,10 @@ distclean: clean
 	$(RM) -- $(TARGETS)
 
 install: $(TARGETS)
-	$(MKDIR) $(DESTDIR)$(BINDIR)
-	$(INSTALL) -m 0755 inetd $(DESTDIR)$(BINDIR)/inetd
+	$(MKDIR) $(DESTDIR)$(SBINDIR)
+	$(INSTALL) -m 0755 inetd $(DESTDIR)$(SBINDIR)/inetd
 
 uninstall:
-	$(RM) -- $(DESTDIR)$(BINDIR)/inetd
+	$(RM) -- $(DESTDIR)$(SBINDIR)/inetd
 
 .PHONY: all clean distclean install uninstall
