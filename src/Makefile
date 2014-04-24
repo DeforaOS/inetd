@@ -69,7 +69,7 @@ distclean: clean
 
 install: $(TARGETS)
 	$(MKDIR) $(DESTDIR)$(BINDIR)
-	$(INSTALL) -m 0755 -- inetd $(DESTDIR)$(BINDIR)/inetd
+	$(INSTALL) -m 0755 inetd $(DESTDIR)$(BINDIR)/inetd
 
 uninstall:
 	$(RM) -- $(DESTDIR)$(BINDIR)/inetd
